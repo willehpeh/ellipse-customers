@@ -16,7 +16,7 @@ They are characterized by their identity, actual sales and expected sales.
 ### sales agents
 They close deals with customers and manage the commercial relationship through contacts (telephone, visits, e-mails) with customers.
 
-## persona
+## Persona
 ### sales agent persona
 ### staff persona
 ### app administrator persona
