@@ -7,15 +7,16 @@
 * mailing
 
 ### Entities
-* Client - root entity
-* ProspectiveClient
-* Contact
+* Client - aggregate
+* Lead
+* Collaborator - aggregate
 * Appointment
 * MailingCampaign
+* RelationshipHistory
 
 ### Value Objects
 * Participant
-* ClientEvent - sale, quote, conversation, mail
+* ClientHistoryEvent - sale, quote, conversation, mail
 
 ## Product management
 * pricing
