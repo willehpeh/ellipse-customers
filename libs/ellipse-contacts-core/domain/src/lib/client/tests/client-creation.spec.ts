@@ -32,4 +32,10 @@ describe('Creating clients', () => {
       expect(client).toBeUndefined();
     } catch (error) { /* no-op */ }
   });
+
+  it('should not have any collaborators when Client is created', () => {
+    const client = clientFactory.createClient('My awesome company');
+
+    expect(client.totalCollaborators).toBe(0);
+  });
 });
