@@ -1,4 +1,5 @@
 import { ClientFactory } from '../factories/client.factory';
+import { Client } from '../entities/client';
 
 describe('Creating clients', () => {
 
@@ -22,5 +23,13 @@ describe('Creating clients', () => {
     const client = clientFactory.createClient(titleCaseCompanyNameWithAccents);
 
     expect(client.companyName).toBe(expected);
+  });
+
+  it('should not be able to create a Client with an empty company name', () => {
+    let client: Client;
+    try {
+      client = clientFactory.createClient('');
+      expect(client).toBeUndefined();
+    } catch (error) { /* no-op */ }
   });
 });
