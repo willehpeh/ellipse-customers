@@ -1,0 +1,19 @@
+{
+  "name": "ellipse-contacts-application",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ellipse-contacts-core/application/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ellipse-contacts-core/application",
+        "main": "libs/ellipse-contacts-core/application/src/index.ts",
+        "tsConfig": "libs/ellipse-contacts-core/application/tsconfig.lib.json",
+        "assets": ["libs/ellipse-contacts-core/application/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

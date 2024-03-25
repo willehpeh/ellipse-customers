@@ -14,7 +14,20 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ellipse-contacts/ellipse-contacts-application": [
+        "libs/ellipse-contacts-core/application/src/index.ts"
+      ],
+      "@ellipse-contacts/ellipse-contacts-domain": [
+        "libs/ellipse-contacts-core/domain/src/index.ts"
+      ],
+      "@ellipse-contacts/ellipse-contacts-infrastructure": [
+        "libs/ellipse-contacts-infrastructure/infrastructure/src/index.ts"
+      ],
+      "@ellipse-contacts/ellipse-contacts-persistence": [
+        "libs/ellipse-contacts-infrastructure/persistence/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
