@@ -1,4 +1,4 @@
-import { CompanyName } from './value-objects/company-name';
+import { CompanyName } from '../value-objects/company-name';
 
 export class Client {
 
