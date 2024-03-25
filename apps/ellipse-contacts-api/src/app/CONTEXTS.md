@@ -2,7 +2,7 @@
 
 ## Customer relationship management
 * scheduling
-* contact information
+* collaborator information
 * relationship history
 * mailing
 
@@ -16,7 +16,8 @@
 
 ### Value Objects
 * Participant
-* ClientHistoryEvent - sale, quote, conversation, mail
+* ClientHistoryEvent - sale, quote
+* CollaboratorHistoryEvent - conversation, mail
 
 ## Product management
 * pricing
