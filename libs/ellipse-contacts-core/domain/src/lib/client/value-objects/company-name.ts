@@ -10,6 +10,6 @@ export class CompanyName extends ValueObject<string> {
 
   constructor(companyName: string) {
     super();
-    this._companyName = companyName.toUpperCase();
+    this._companyName = companyName.toLocaleUpperCase();
   }
 }

@@ -2,24 +2,25 @@ import { ClientFactory } from './client.factory';
 
 describe('Creating clients', () => {
 
-  let titleCaseCompanyName: string;
-  let companyNameAllCaps: string;
-
-  let titleCaseCompanyNameWithAccents: string;
-  let companyNameWithAccentsAllCaps: string;
+  let clientFactory: ClientFactory;
 
   beforeEach(() => {
-    titleCaseCompanyName = 'My New Company';
-    companyNameAllCaps = 'MY NEW COMPANY';
-
-    titleCaseCompanyNameWithAccents = 'Mà supéèr êntrôprîseâ';
-    companyNameWithAccentsAllCaps = 'MÀ SUPÉÈR ÊNTREÔPRÎSEÀ';
+    clientFactory = new ClientFactory();
   });
 
   it('should create a Client with the correct company name capitalized', () => {
-    const clientFactory = new ClientFactory();
+    const titleCaseCompanyName = 'My New Company';
+    const expected = 'MY NEW COMPANY';
     const client = clientFactory.createClient({ companyName: titleCaseCompanyName });
 
-    expect(client.companyName).toBe(companyNameAllCaps);
+    expect(client.companyName).toBe(expected);
+  });
+
+  it('should create a Client with the correct company name capitalized (including accents)', () => {
+    const titleCaseCompanyNameWithAccents = 'Mà supéèr êntrôprîseâ';
+    const expected = 'MÀ SUPÉÈR ÊNTRÔPRÎSEÂ';
+    const client = clientFactory.createClient({ companyName: titleCaseCompanyNameWithAccents });
+
+    expect(client.companyName).toBe(expected);
   });
 });
