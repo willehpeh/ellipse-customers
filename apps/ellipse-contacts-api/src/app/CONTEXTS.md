@@ -2,7 +2,7 @@
 
 ## Customer relationship management
 * scheduling
-* collaborator information
+* client/collaborator information
 * relationship history
 * mailing
 
