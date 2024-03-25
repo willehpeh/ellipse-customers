@@ -38,4 +38,10 @@ describe('Creating clients', () => {
 
     expect(client.totalCollaborators).toBe(0);
   });
+
+  it('should have a valid ClientId on creation', () => {
+    const client = clientFactory.createClient('My awesome company');
+
+    expect(client.id).toMatch(/^CLIENT-[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89ABab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/);
+  });
 });

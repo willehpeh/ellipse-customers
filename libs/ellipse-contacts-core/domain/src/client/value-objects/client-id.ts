@@ -10,6 +10,6 @@ export class ClientId extends ValueObject<string> {
   constructor() {
     super();
     const uuid = crypto.randomUUID();
-    this.id = `CMPNY-${uuid}`;
+    this.id = `CLIENT-${uuid}`;
   }
 }
