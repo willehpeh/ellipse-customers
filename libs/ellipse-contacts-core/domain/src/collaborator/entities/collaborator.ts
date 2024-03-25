@@ -13,7 +13,7 @@ export class Collaborator {
     return this._lastName.value;
   }
 
-  constructor(firstName: CollaboratorName, lastName: CollaboratorName) {
+  constructor(lastName: CollaboratorName, firstName: CollaboratorName) {
     this._firstName = firstName;
     this._lastName = lastName;
   }
