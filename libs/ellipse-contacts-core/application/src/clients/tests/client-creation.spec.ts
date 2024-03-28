@@ -1,5 +1,6 @@
 import { ClientsService } from '../clients.service';
 import { ClientsInMemRepository } from './clients-in-mem.repository';
+import { ClientId } from '@ellipse-contacts/ellipse-contacts-domain';
 
 describe('Creating clients', () => {
   let clientsService: ClientsService;
@@ -43,6 +44,6 @@ describe('Creating clients', () => {
   it('should have a valid ClientId on creation', () => {
     clientsService.createNewClient('My awesome company');
 
-    expect(clientsRepository.clients[0].id).toMatch(/^CLIENT-[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-4[0-9a-fA-F]{3}-[89ABab][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$/);
+    expect(clientsRepository.clients[0].id).toMatch(ClientId.regExp());
   });
 });
