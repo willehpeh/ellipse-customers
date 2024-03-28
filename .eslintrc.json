@@ -13,8 +13,8 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "ellipse-contacts-core",
+                "onlyDependOnLibsWithTags": ["ellipse-contacts-core"]
               }
             ]
           }
