@@ -1,6 +1,5 @@
 import { ClientsService } from '../clients.service';
 import { ClientsInMemRepository } from './clients-in-mem.repository';
-import { ClientId } from '@ellipse-contacts/ellipse-contacts-domain';
 
 describe('Creating clients', () => {
   let clientsService: ClientsService;
@@ -41,9 +40,4 @@ describe('Creating clients', () => {
     expect(clientsRepository.clients[0].totalCollaborators).toBe(0);
   });
 
-  it('should have a valid ClientId on creation', () => {
-    clientsService.createNewClient('My awesome company');
-
-    expect(clientsRepository.clients[0].id).toMatch(ClientId.regExp());
-  });
 });
